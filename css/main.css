@@ -1,0 +1,96 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 320px;
+}
+.contentHolder {
+	height: 250px;
+	overflow: hidden;
+}
+.loading .contentHolder {
+	background: url(../images/loader.gif) no-repeat 50% 50%;
+}
+.totalNumber {
+	border: 1px solid #000;
+	width: 220px;
+	height: 220px;
+	text-align: center;
+	font-size: 80px;
+	line-height: 220px;
+	border-radius: 110px;
+	margin: 15px auto;
+}
+
+.listCompanies .list {
+	height: 250px;
+	overflow-y: auto;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.loading .totalNumber,
+.loading .list {
+	display: none;
+}
+.listCompanies .list a {
+	display: block;
+	padding: 10px;
+	color: #000;
+	border-top: 1px solid #000;
+}
+.listCompanies .list li:first-child a {
+	border-top: 0;
+}
+.clear:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.newsList {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+}
+.newsList .item {
+	height: 100%;
+	background: #fff;
+	position: absolute;
+	width: 100%;
+	padding: 10px;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	transition: all 1s ease 0s;;
+}
+.newsList .item.active {
+	opacity: 1;
+}
+.newsList .header {
+	font-weight: bold;
+	color: #000;
+}
+.newsList img {
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 0 20px 20px 0;
+}
+.pager {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style: none;
+}
+.pager li {
+	display: inline-block;
+	background: #eee;
+	width: 16px;
+	height: 16px;
+	margin: 0 2px;
+	border-radius: 8px;
+}
+.pager li.active {
+	background: #000;
+}
